@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Article - ParcNepal</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="banner">Submission Portal</div>
+    <div class="submit-article">
+      <h2>Submit a New Article</h2>
+      <form id="article-form">
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Article Title"
+          required
+        />
+        <textarea
+          id="content"
+          name="content"
+          placeholder="Article Content"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("article-form");
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          submitArticle();
+        });
+      });
+    </script>
+  </body>
+</html>
